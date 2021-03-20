@@ -1,0 +1,133 @@
+2021-01-26 18:02:15,038 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 18:16:20,848 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 18:23:15,410 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 18:23:22,655 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 18:26:08,386 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 19:10:45,415 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 19:12:49,738 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 19:13:31,246 ERROR: Exception on /reset_password_request [POST] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 169, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\kyuti\webpage\app\email.py", line 18, in send_password_reset_email
+    html_body=render_template('email/reset_password.html',
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\kyuti\webpage\app\templates\email\reset_password.html", line 9, in top-level template code
+    <p> {{ url_for('reset password', token=token, _external=True) }}</p>
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'reset password' with values ['token']. Did you mean 'reset_password' instead?
+2021-01-26 19:15:04,384 ERROR: Exception on /reset_password_request [POST] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 169, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\kyuti\webpage\app\email.py", line 18, in send_password_reset_email
+    html_body=render_template('email/reset_password.html',
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\kyuti\webpage\app\templates\email\reset_password.html", line 9, in top-level template code
+    <p> {{ url_for('reset_password', token=token, _external=True) }}</p>
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'reset password' with values ['token']. Did you mean 'reset_password' instead?
+2021-01-26 19:15:11,946 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 19:15:15,922 ERROR: Exception on /reset_password_request [POST] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 169, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\kyuti\webpage\app\email.py", line 13, in send_password_reset_email
+    send_email('[Website] Reset Your Password',
+  File "C:\Users\kyuti\webpage\app\email.py", line 9, in send_email
+    mail.send.msg
+AttributeError: 'function' object has no attribute 'msg'
+2021-01-26 19:15:59,498 ERROR: Exception on /reset_password_request [POST] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 169, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\kyuti\webpage\app\email.py", line 13, in send_password_reset_email
+    send_email('[Website] Reset Your Password',
+  File "C:\Users\kyuti\webpage\app\email.py", line 9, in send_email
+    mail.send(msg)
+AttributeError: 'function' object has no attribute 'msg'
+2021-01-26 19:33:04,768 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]

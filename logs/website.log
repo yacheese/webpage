@@ -1,0 +1,53 @@
+2021-03-09 19:09:42,089 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:10:06,222 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:26:46,710 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:27:04,102 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:49:58,806 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:48]
+2021-03-09 19:50:49,907 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:48]
+2021-03-19 20:52:06,978 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 20:53:22,118 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 20:55:57,208 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 20:57:17,157 ERROR: Exception on /user/edgar [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 88, in user
+    return render_template('user.html', user=user, posts=posts.items,
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\kyuti\webpage\app\templates\user.html", line 13, in template
+    <p>{{ _('%(count)d followers,' count=user.followers.count()) }}, {{ _('%(count)d following', count=user.followed.count()) }}</p>
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'count'
+2021-03-19 20:59:05,118 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 21:01:29,606 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:02:07,743 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:02:45,666 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:04:49,205 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:05:03,273 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:05:44,723 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
