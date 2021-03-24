@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-19 20:40-0700\n"
-"PO-Revision-Date: 2021-03-23 20:16-0700\n"
+"POT-Creation-Date: 2021-03-23 20:23-0700\n"
+"PO-Revision-Date: 2021-03-23 20:25-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
 "Language-Team: es <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+
+#: app/__init__.py:20
+msgid "Please log in to access this page."
+msgstr ""
 
 #: app/email.py:19
 msgid "[Microblog] Reset Your Password"
@@ -46,7 +50,7 @@ msgstr ""
 msgid "Repeat Password"
 msgstr ""
 
-#: app/forms.py:18 app/templates/register.html:5
+#: app/forms.py:18 app/routes.py:68 app/templates/register.html:5
 msgid "Register"
 msgstr ""
 
@@ -78,6 +82,65 @@ msgstr ""
 msgid "Say something"
 msgstr ""
 
+#: app/routes.py:20
+msgid "Your post is now live!"
+msgstr ""
+
+#: app/routes.py:28 app/templates/base.html:22
+msgid "Home"
+msgstr ""
+
+#: app/routes.py:40
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/routes.py:66
+msgid "Congratulations, you are now a registered user!"
+msgstr ""
+
+#: app/routes.py:101
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/routes.py:106 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr ""
+
+#: app/routes.py:115 app/routes.py:134
+#, python-format
+msgid "User %(username)s not found."
+msgstr ""
+
+#: app/routes.py:122
+#, python-format
+msgid "You are following %(username)s!"
+msgstr ""
+
+#: app/routes.py:137
+msgid "You cannot unfollow yourself!"
+msgstr ""
+
+#: app/routes.py:141
+#, python-format
+msgid "You are not following %(username)s."
+msgstr ""
+
+#: app/routes.py:155 app/templates/base.html:23
+msgid "Explore"
+msgstr ""
+
+#: app/routes.py:167
+msgid "Check your email for the instructions to reset your password"
+msgstr ""
+
+#: app/routes.py:170 app/templates/reset_password_request.html:5
+msgid "Reset Password"
+msgstr ""
+
+#: app/routes.py:183
+msgid "Your password has been reset."
+msgstr ""
+
 #: app/templates/404.html:4
 msgid "File Not Found"
 msgstr ""
@@ -103,24 +166,16 @@ msgstr ""
 msgid "Welcome to Microblog"
 msgstr ""
 
-#: app/templates/base.html:22
-msgid "Home"
-msgstr ""
-
-#: app/templates/base.html:23
-msgid "Explore"
-msgstr ""
-
 #: app/templates/base.html:27
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:30
-msgid "Logout"
+#: app/templates/base.html:29
+msgid "Profile"
 msgstr ""
 
-#: app/templates/edit_profile.html:5
-msgid "Edit Profile"
+#: app/templates/base.html:30
+msgid "Logout"
 msgstr ""
 
 #: app/templates/index.html:5
@@ -128,11 +183,11 @@ msgstr ""
 msgid "Hi, %(username)s!"
 msgstr ""
 
-#: app/templates/index.html:16
+#: app/templates/index.html:16 app/templates/user.html:41
 msgid "Newer Posts"
 msgstr ""
 
-#: app/templates/index.html:20
+#: app/templates/index.html:20 app/templates/user.html:45
 msgid "Older Posts"
 msgstr ""
 
@@ -156,7 +211,33 @@ msgstr ""
 msgid "Reset Your Password"
 msgstr ""
 
-#: app/templates/reset_password_request.html:5
-msgid "Reset Password"
+#: app/templates/user.html:8
+msgid "User"
+msgstr ""
+
+#: app/templates/user.html:11
+msgid "Last seen on"
+msgstr ""
+
+#: app/templates/user.html:13
+#, python-format
+msgid "%(count)d followers"
+msgstr ""
+
+#: app/templates/user.html:13
+#, python-format
+msgid "%(count)d following"
+msgstr ""
+
+#: app/templates/user.html:15
+msgid "Edit your profile"
+msgstr ""
+
+#: app/templates/user.html:20
+msgid "Follow"
+msgstr ""
+
+#: app/templates/user.html:27
+msgid "Unfollow"
 msgstr ""
 
