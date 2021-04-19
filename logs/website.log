@@ -63,3 +63,7 @@ jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'count'
 2021-04-04 21:35:59,448 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
 2021-04-04 21:39:03,619 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
 2021-04-04 21:41:40,076 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-18 19:24:24,337 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-18 19:44:58,924 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 19:48:25,926 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 19:48:45,287 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
