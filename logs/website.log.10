@@ -1,0 +1,126 @@
+2021-01-26 19:33:12,540 ERROR: Exception on /reset_password_request [POST] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 856, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 604, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 444, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 169, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\kyuti\webpage\app\email.py", line 13, in send_password_reset_email
+    send_email('[Website] Reset Your Password',
+  File "C:\Users\kyuti\webpage\app\email.py", line 9, in send_email
+    mail.send(msg)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 988, in quit
+    res = self.docmd("quit")
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 424, in docmd
+    self.putcmd(cmd, args)
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2021-01-26 19:35:21,930 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-01-26 19:36:14,393 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MiwiZXhwIjoxNjExNzE5MTI3LjY3NzQ2OX0.aGqJ5iwOmqwqsn5vbJHNRNMWJql-tXPy9CjZ9e9qmXM [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 178, in reset_password
+    user = User.verify.reset_password_token(token)
+AttributeError: type object 'User' has no attribute 'verify'
+2021-01-26 19:36:22,245 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MywiZXhwIjoxNjExNzE5MTU1Ljg0ODYwNDd9.f59NkBtcePd9B6vy0D_5gkaJpFRRHkuq56h5MvXKVTQ [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 178, in reset_password
+    user = User.verify.reset_password_token(token)
+AttributeError: type object 'User' has no attribute 'verify'
+2021-01-26 19:38:04,065 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
+2021-02-09 20:35:14,338 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-02-09 20:35:30,821 ERROR: Exception on /login [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 43, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\kyuti\webpage\app\templates\login.html", line 12, in template
+    <p>New User <a href="{{ url_for('register') }}">Click to Register!</a></p>
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.

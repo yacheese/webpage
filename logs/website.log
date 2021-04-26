@@ -1,13 +1,4 @@
-2021-03-09 19:09:42,089 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
-2021-03-09 19:10:06,222 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
-2021-03-09 19:26:46,710 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
-2021-03-09 19:27:04,102 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
-2021-03-09 19:49:58,806 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:48]
-2021-03-09 19:50:49,907 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:48]
-2021-03-19 20:52:06,978 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
-2021-03-19 20:53:22,118 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
-2021-03-19 20:55:57,208 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
-2021-03-19 20:57:17,157 ERROR: Exception on /user/edgar [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
+2021-04-20 20:35:24,970 ERROR: Exception on /index [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -23,47 +14,48 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\kyuti\webpage\app\routes.py", line 88, in user
-    return render_template('user.html', user=user, posts=posts.items,
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 40, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
   File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\kyuti\webpage\app\templates\user.html", line 13, in template
-    <p>{{ _('%(count)d followers,' count=user.followers.count()) }}, {{ _('%(count)d following', count=user.followed.count()) }}</p>
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'count'
-2021-03-19 20:59:05,118 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
-2021-03-19 21:01:29,606 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
-2021-03-19 21:02:07,743 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
-2021-03-19 21:02:45,666 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
-2021-03-19 21:04:49,205 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
-2021-03-19 21:05:03,273 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
-2021-03-19 21:05:44,723 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
-2021-03-23 20:13:09,723 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-03-23 20:20:45,641 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-03-23 20:27:17,571 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-03-23 20:28:13,740 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-03-23 20:46:36,078 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-04 21:18:04,474 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-04 21:19:22,318 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-04 21:22:18,382 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-04 21:33:32,224 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-04 21:35:59,448 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-04 21:39:03,619 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-04 21:41:40,076 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-18 19:24:24,337 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
-2021-04-18 19:44:58,924 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
-2021-04-18 19:48:25,926 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
-2021-04-18 19:48:45,287 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+  File "C:\Users\kyuti\webpage\app\templates\index.html", line 2, in top-level template code
+    {% import "bootstrap/wtf.html" as wtf %}
+  File "C:\Users\kyuti\webpage\app\templates\base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\kyuti\webpage\app\templates\base.html", line 51, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\kyuti\webpage\app\templates\index.html", line 11, in block "app_content"
+    {% include '_post.html' %}
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\kyuti\webpage\app\templates\_post.html", line 18, in template
+    <a href="#">{{ _('Translate') }}</a>
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2021-04-20 20:36:05,851 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:37:10,031 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:39:08,176 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:39:21,890 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:42:04,299 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:45:06,728 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:46:06,663 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:46:32,060 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-25 20:53:12,069 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-25 20:59:14,642 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]

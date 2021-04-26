@@ -8,14 +8,14 @@ class LoginForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])
     password = PasswordField(_l('Password'), validators=[DataRequired()])
     remember_me = BooleanField(_l('Remember Me'))
-    submit = SubmitField(_l('Sign In'))
+    submit = SubmitField(_('Sign In'))
     
 class RegistrationForm(FlaskForm):
     username = StringField(_('Username'), validators=[DataRequired()])
     email = StringField(_l('Email'), validators=[DataRequired(), Email()])
     password = PasswordField(_('Password'), validators=[DataRequired()])
     password2 = PasswordField(_('Repeat Password'), validators=[DataRequired(), EqualTo('password')])
-    submit = SubmitField(_l('Register'))
+    submit = SubmitField(_('Register'))
     
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
@@ -32,14 +32,14 @@ class ResetPasswordRequestForm(FlaskForm):
     submit = SubmitField(_l('Request Password Reset'))
     
 class ResetPasswordForm(FlaskForm):
-    password = PasswordField(_l('Password'), validators=[DataRequired()])
-    password2 = PasswordField(_l('Repeat Password'), validators=[DataRequired(), EqualTo('password')])
-    submit = SubmitField(_l('Request Password Reset'))
+    password = PasswordField(_('Password'), validators=[DataRequired()])
+    password2 = PasswordField(_('Repeat Password'), validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField(_('Request Password Reset'))
 
 class EditProfileForm(FlaskForm):
-    username = StringField(_l('Username'), validators=[DataRequired()])
-    about_me = TextAreaField(_l('About Me'), validators=[Length(min=0, max=140)])
-    submit = SubmitField(_l('Submit'))
+    username = StringField(('Username'), validators=[DataRequired()])
+    about_me = TextAreaField(_('About Me'), validators=[Length(min=0, max=140)])
+    submit = SubmitField(_('Submit'))
     
     def __init__(self, original_username, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)
@@ -53,7 +53,7 @@ class EditProfileForm(FlaskForm):
     
 class EmptyForm(FlaskForm):
     submit = SubmitField(_('Submit'))
-    
+
 class PostForm(FlaskForm):
     post = TextAreaField(_('Say something'), validators=[DataRequired()])
     submit = SubmitField(_('Submit'))

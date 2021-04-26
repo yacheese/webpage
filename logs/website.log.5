@@ -1,25 +1,13 @@
-2021-01-26 19:33:12,540 ERROR: Exception on /reset_password_request [POST] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 492, in send
-    message.send(connection)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 427, in send
-    connection.send(self)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 188, in send
-    self.host.sendmail(sanitize_address(envelope_from or message.sender),
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 856, in sendmail
-    self.ehlo_or_helo_if_needed()
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 604, in ehlo_or_helo_if_needed
-    if not (200 <= self.ehlo()[0] <= 299):
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 444, in ehlo
-    self.putcmd(self.ehlo_msg, name or self.local_hostname)
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 371, in putcmd
-    self.send(str)
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 363, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
-
-During handling of the above exception, another exception occurred:
-
+2021-03-09 19:09:42,089 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:10:06,222 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:26:46,710 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:27:04,102 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
+2021-03-09 19:49:58,806 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:48]
+2021-03-09 19:50:49,907 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:48]
+2021-03-19 20:52:06,978 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 20:53:22,118 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 20:55:57,208 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 20:57:17,157 ERROR: Exception on /user/edgar [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,78 +21,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\kyuti\webpage\app\routes.py", line 169, in reset_password_request
-    send_password_reset_email(user)
-  File "C:\Users\kyuti\webpage\app\email.py", line 13, in send_password_reset_email
-    send_email('[Website] Reset Your Password',
-  File "C:\Users\kyuti\webpage\app\email.py", line 9, in send_email
-    mail.send(msg)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 492, in send
-    message.send(connection)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_mail.py", line 152, in __exit__
-    self.host.quit()
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 988, in quit
-    res = self.docmd("quit")
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 424, in docmd
-    self.putcmd(cmd, args)
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 371, in putcmd
-    self.send(str)
-  File "C:\Users\kyuti\anaconda3\lib\smtplib.py", line 363, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
-2021-01-26 19:35:21,930 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
-2021-01-26 19:36:14,393 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MiwiZXhwIjoxNjExNzE5MTI3LjY3NzQ2OX0.aGqJ5iwOmqwqsn5vbJHNRNMWJql-tXPy9CjZ9e9qmXM [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\kyuti\webpage\app\routes.py", line 178, in reset_password
-    user = User.verify.reset_password_token(token)
-AttributeError: type object 'User' has no attribute 'verify'
-2021-01-26 19:36:22,245 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MywiZXhwIjoxNjExNzE5MTU1Ljg0ODYwNDd9.f59NkBtcePd9B6vy0D_5gkaJpFRRHkuq56h5MvXKVTQ [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\kyuti\webpage\app\routes.py", line 178, in reset_password
-    user = User.verify.reset_password_token(token)
-AttributeError: type object 'User' has no attribute 'verify'
-2021-01-26 19:38:04,065 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:44]
-2021-02-09 20:35:14,338 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:46]
-2021-02-09 20:35:30,821 ERROR: Exception on /login [GET] [in C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\kyuti\webpage\app\routes.py", line 43, in login
-    return render_template('login.html', title='Sign In', form=form)
+  File "C:\Users\kyuti\anaconda3\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\kyuti\webpage\app\routes.py", line 88, in user
+    return render_template('user.html', user=user, posts=posts.items,
   File "C:\Users\kyuti\anaconda3\lib\site-packages\flask\templating.py", line 138, in render_template
     ctx.app.jinja_env.get_or_select_template(template_name_or_list),
   File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
@@ -121,6 +41,50 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "C:\Users\kyuti\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\kyuti\webpage\app\templates\login.html", line 12, in template
-    <p>New User <a href="{{ url_for('register') }}">Click to Register!</a></p>
-jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+  File "C:\Users\kyuti\webpage\app\templates\user.html", line 13, in template
+    <p>{{ _('%(count)d followers,' count=user.followers.count()) }}, {{ _('%(count)d following', count=user.followed.count()) }}</p>
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'count'
+2021-03-19 20:59:05,118 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:55]
+2021-03-19 21:01:29,606 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:02:07,743 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:02:45,666 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:04:49,205 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:05:03,273 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-19 21:05:44,723 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:56]
+2021-03-23 20:13:09,723 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-03-23 20:20:45,641 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-03-23 20:27:17,571 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-03-23 20:28:13,740 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-03-23 20:46:36,078 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-04 21:18:04,474 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-04 21:19:22,318 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-04 21:22:18,382 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-04 21:33:32,224 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-04 21:35:59,448 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-04 21:39:03,619 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-04 21:41:40,076 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-18 19:24:24,337 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:57]
+2021-04-18 19:44:58,924 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 19:48:25,926 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 19:48:45,287 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 19:56:42,631 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:27:15,559 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:29:43,980 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:29:55,672 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:43:14,936 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:45:02,270 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:45:32,327 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:48:17,545 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 20:48:58,512 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:06:12,270 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:13:11,770 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:13:34,415 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:14:35,170 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:23:55,454 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:29:12,288 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:30:40,793 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-18 21:32:05,586 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 19:26:31,927 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 19:47:45,523 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 19:47:55,959 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-04-20 20:33:54,896 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
