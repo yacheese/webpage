@@ -59,3 +59,4 @@ jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was loo
 2021-04-20 20:46:32,060 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
 2021-04-25 20:53:12,069 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
 2021-04-25 20:59:14,642 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
+2021-05-04 19:13:55,316 INFO: Website Startup [in C:\Users\kyuti\webpage\app\__init__.py:52]
